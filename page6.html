@@ -1,0 +1,52 @@
+<html>
+   <head>
+       <link rel = "stylesheet" href="game.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Dancing+Script&display=swap" rel="stylesheet">
+      <script>
+        var lives = 3;
+
+        function answer()
+        {
+          var x = document.getElementById('answer').value;
+
+          if (x == "castle")
+            {
+            document.getElementById("message").innerHTML = "Congratulations. You beat the odds! You may eat cake.";
+            }
+          else if (x == "Castle")
+            {
+            document.getElementById("message").innerHTML = "Congratulations. You beat the odds! You may eat cake.";
+            }
+          else
+            {
+                 lives = lives - 1;
+                 if(lives > 0)
+                 {
+                   document.getElementById('message').innerHTML = "You have " + lives + " lives left. Try Again";
+                 }
+                 else {
+                     document.getElementById('text0').style.visibility = "hidden";
+                     document.getElementById('text').style.visibility = "hidden";
+                      document.getElementById('text2').style.visibility = "hidden";
+                       document.getElementById('text3').style.visibility = "hidden";
+                        document.getElementById('text4').style.visibility = "hidden";
+                         document.getElementById('message').innerHTML = "GAME OVER";
+                 }
+            }
+        }
+
+
+      </script>
+   </head>
+   <body>
+
+
+      <center> <h1 id = "text0"> Nice you ran!! Smart choice. </h1>
+      <p id = "text"> You make it across the fold to West Ravka. To win, Answer this question. </p>
+      <p id = "text2"> I possess a halo of water, walls of stone, and a tongue of wood. Long I have stood; what am I? </p>
+      <p id = "text3"><input type = "text" id = "answer" placeholder = "Answer Here"></p>
+      <p id = "text4"><input id = "button" type = "button" value = "Submit" onclick = "answer()"></p>
+      <p id = "message"></p>
+   </body>
+</html>

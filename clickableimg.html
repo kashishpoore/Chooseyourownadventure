@@ -1,0 +1,28 @@
+<html>
+<head>
+  <script>
+    function hide()
+    {
+    document.getElementById("answer").style.visibilty = "hidden";
+    document.getElementById("question")style.visibility =  "hidden";
+    }
+    function actionOne()
+    {
+      document.getElementById('question').innerHTML = "What kind of food always passes its vision exams?";
+      document.getElementById("answer").style.visibility = "visible";
+    }
+    
+</script>
+
+</head>
+
+
+<body onload = "hide()">
+  <h1>Click the calamari to ask it a question</h1>
+  <img src = "calamari.jpg" width = "50%" height= "50%" onclick = "actionOne()">
+  <p id = "question"></p>
+  <input type = "text" id = "answer">
+  <input type = "button" onclick = "checkAnswer()">
+</body>
+
+</html>

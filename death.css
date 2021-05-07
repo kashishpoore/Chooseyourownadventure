@@ -1,0 +1,15 @@
+#pg5head{
+  font-family: 'Averia Gruesa Libre', cursive;
+  font-size: 60px;
+    }
+
+
+#death{
+   border: 5px solid black;
+     }
+
+body{
+  padding-top: 160px;
+  background-color: gray;
+  font-size: 20px;
+}

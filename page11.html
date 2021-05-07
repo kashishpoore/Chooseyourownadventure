@@ -1,0 +1,52 @@
+<html>
+   <head>
+       <link rel = "stylesheet" href="game.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Dancing+Script&display=swap" rel="stylesheet">
+      <script>
+        var lives = 3;
+        var userName = "";
+
+        function answer()
+        {
+          userName = window.localStorage.getItem("name");
+          var x = document.getElementById('answer').value;
+
+          if (x == "e")
+            {
+            document.getElementById("message").innerHTML = "Congratulations." + userName + " You beat the odds! You may eat cake.";
+            }
+          else if (x == "E")
+            {
+            document.getElementById("message").innerHTML = "Congratulations." + userName + " You beat the odds! The Volcra were obliterated with your light summoning and the world is safe.";
+            }
+          else
+            {
+                 lives = lives - 1;
+                 if(lives > 0)
+                 {
+                   document.getElementById('message').innerHTML = "You have " + lives + " lives left. Try Again";
+                 }
+                 else {
+                     document.getElementById('text0').style.visibility = "hidden";
+                     document.getElementById('text').style.visibility = "hidden";
+                      document.getElementById('text2').style.visibility = "hidden";
+                       document.getElementById('text3').style.visibility = "hidden";
+                        document.getElementById('text4').style.visibility = "hidden";
+                         document.getElementById('message').innerHTML = "GAME OVER";
+                 }
+            }
+        }
+
+
+      </script>
+   </head>
+   <body>
+           <center> <h1 id = "text0"> You chose power. Smart choice. </h1>
+           <p id = "text"> With this power you now have the power to save the human race. But before you do. You need to pass a test. Answer the question below in under 3 tries to access that well of power.  </p>
+           <p id = "text2"> I end the race, I am the beginning of the end. The start of eternity and the end of space. There are two of me in heaven and one in hell. I am in water, fire, sunshine and darkness. I am the beginning of earth and the end of life. WHAT AM I?</p>
+           <p id = "text3"><input type = "text" id = "answer" placeholder = "Answer Here"></p>
+           <p id = "text4"><input id = "button" type = "button" value = "Submit" onclick = "answer()"></p>
+           <p id = "message"></p>
+        </body>
+     </html>

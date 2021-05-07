@@ -1,0 +1,48 @@
+body{
+  background-color: #010134;
+  padding-top: 80px;
+  font-family: 'Averia Gruesa Libre', cursive;
+}
+
+h1{
+  font-family: 'Averia Gruesa Libre', cursive;
+  color:#CFB53B;
+  font-size: 40px;
+}
+p{
+  font-family: 'Averia Gruesa Libre', cursive;
+  font-size: 20px;
+  color: #A57C00;
+}
+
+img{
+  border: 10px solid #A57C00;
+}
+
+input{
+  font-family: 'Averia Gruesa Libre', cursive;
+  color: #A57C00;
+}
+
+table{
+  padding: 10px;
+}
+
+#namebox{
+  color: #A57C00;
+}
+
+#button{
+  color: #A57C00;
+}
+td{
+  border-left: 2px solid black;
+}
+
+#button:hover{
+  background-color: #A21A24;
+}
+
+#head1{
+  font-size: 60px;
+}

@@ -1,0 +1,36 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel = "stylesheet" href="game.css">
+  <script>
+
+
+  function hide()
+    {
+    document.getElementById('enter').style.visibility = "hidden";
+
+    }
+  function action1()
+    {
+      var userName = document.getElementById("namebox").value;
+      document.getElementById("username").innerHTML = "Welcome  &nbsp" + userName + "! &nbsp To get started, click on the picture below.";
+          window.localStorage.setItem("name", userName);
+    }
+  function pageOne()
+    {
+      window.location.href = "pageOne.html";
+    }
+  </script>
+</head>
+
+
+<body>
+  <center> <h1 id = "head1"> Welcome to Ravka, the Broken Country.<h1>
+  <input type = "text" placeholder = "Name" id = "namebox">
+  <input id = "button" type = "button" value = "Click Me" id = "enter" onclick = "action1()"> <br><br>
+  <p id = "username"></p>
+  <img src = "path.jpeg" onclick = "pageOne()" height = "40%" width = "30%">
+
+</body>
+</html>
